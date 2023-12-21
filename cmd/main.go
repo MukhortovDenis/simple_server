@@ -5,8 +5,6 @@ import (
 	simpleserver "vsu"
 	"vsu/config"
 	"vsu/internal/auth/cache"
-
-	"github.com/joho/godotenv"
 )
 
 func main() {
@@ -16,10 +14,6 @@ func main() {
 }
 
 func run() error {
-	if err := godotenv.Load(); err != nil {
-		return err
-	}
-
 	cfg, err := config.FromEnv()
 	if err != nil {
 		return err
