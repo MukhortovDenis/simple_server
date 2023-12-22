@@ -14,7 +14,7 @@ spec:
           image: docker.io/simple_server:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 40001
+            - containerPort: 8080
           env:
             - name: HTTP_LISTEN_ADDR
               value: ":8080"
