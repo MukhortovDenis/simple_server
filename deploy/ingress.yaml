@@ -9,7 +9,7 @@ spec:
     - host: simple-server.auth
       http:
         paths:
-          - path: /
+          - path: /simple
             pathType: Prefix
             backend:
               service:
