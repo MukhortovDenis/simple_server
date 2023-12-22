@@ -3,10 +3,10 @@ kind: Ingress
 metadata:
   name: simple-ingress
   annotations:
-    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: /$1
 spec:
   rules:
-    - host: simple.localhost
+    - host: simple-server.auth
       http:
         paths:
           - path: /
@@ -15,4 +15,4 @@ spec:
               service:
                 name: simple-service
                 port:
-                  number: 80
+                  number: 8080
